@@ -3,7 +3,7 @@
     <div class="col-xxl-8 box-col-12">
         <div class="card">
             <div class="card-header pb-0">
-                <h5>Credit card </h5>
+                <h5>Payment </h5>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -27,6 +27,9 @@
                                     <option>Master</option>
                                     <option>Visa</option>
                                 </select>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary float-end">Submite</button>
                             </div>
                         </form>
                     </div>

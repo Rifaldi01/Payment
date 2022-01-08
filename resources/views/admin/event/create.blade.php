@@ -6,24 +6,40 @@
         <div class="card-body">
             <form class="" action="" method="">
                 <div class="mb-3">
-                    <label class="form-label" for="">Name Event</label>
+                    <label class="form-label" for=""><i class="text-danger">*</i>Name Event</label>
                     <input type="text" class="form-control" id="validationFormCheck1" placeholder="Name Event" required="">
                     <div class="invalid-feedback">Example invalid feedback text</div>
                 </div>
-                <label class="form-label ">Date</label>
-                <div >
-                    <div class="input-group date" id="dt-minimum" data-target-input="nearest">
-                        <input class="form-control datetimepicker-input digits " type="text" data-target="#dt-minimum">
-                        <div class="input-group-text" data-target="#dt-minimum" data-toggle="datetimepicker"><i class="fa fa-calendar"> </i></div>
+                <div class="row g-2 mb-2">
+                    <div class="col-md-6">
+                        <label class="form-label" ><i class="text-danger">*</i>Start Event</label>
+                        <input class="form-control"  type="date" value="Start" required="">
+
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" ><i class="text-danger">*</i>End Event</label>
+                        <input class="form-control"  type="date" value="End" required="">
+
                     </div>
                 </div>
-                <label for="select" class="form-label">Category</label>
+
+                <label for="select" class="form-label mt-2"><i class="text-danger">*</i>Public To :</label>
                 <div class="mb-3">
                     <select class="form-select" required="" aria-label="select example">
-                        <option value="">Category Event</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="">Public To...</option>
+                        <option value="1">Facebook</option>
+                        <option value="2">Instagram</option>
+                        <option value="3">Twitter</option>
+                    </select>
+                </div>
+
+                <label for="select" class="form-label "><i class="text-danger">*</i>From Company</label>
+                <div class="mb-3">
+                    <select class="form-select" required="" aria-label="select example">
+                        <option value="">Select Company...</option>
+                        <option value="1">PT. MAKMUR </option>
+                        <option value="2">PT. PERKASA </option>
+                        <option value="3">PT. SEJAHTERA INDONESIA</option>
                     </select>
                 </div>
                 <div>
