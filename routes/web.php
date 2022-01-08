@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\admin\dashboardController;
-use App\Http\Controllers\admin\eventController;
-use App\Http\Controllers\admin\paymentController;
+use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\EventController;
+use App\Http\Controllers\admin\PaymentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,10 +21,6 @@ use App\Http\Controllers\admin\paymentController;
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/', [dashboardController::class, 'index'])->name('dasboard');
-Route::get('/event', [eventController::class, 'index'])->name('event');
-Route::get('/detail', [eventController::class, 'store'])->name('detail');
-Route::get('/create-event', [eventController::class, 'create'])->name('event');
-Route::get('/payment', [paymentController::class, 'index'])->name('payment');
-Route::get('/create-payment', [paymentController::class, 'create'])->name('event');
+Route::get('/', [DashboardController::class, 'index']);
+Route::resource('event', EventController::class)->names('admin.event');
+Route::resource('payement', PaymentController::class)->names('admin.payment');

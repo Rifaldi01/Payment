@@ -20,15 +20,15 @@
                     <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i
                                 data-feather="airplay"></i><span>Event</span></a>
                         <ul class="nav-submenu menu-content">
-                            <li><a href="{{URL::to('/event')}}">List Event</a></li>
-                            <li><a href="{{URL::to('/create-event')}}">Create Event</a></li>
+                            <li><a href="{{route('admin.event.index')}}">List Event</a></li>
+                            <li><a href="{{route('admin.event.create')}}">Create Event</a></li>
                         </ul>
                     </li>
                     <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i
                                 data-feather="layout"></i><span>Payment</span></a>
                         <ul class="nav-submenu menu-content">
-                            <li><a href="{{URL::to('/payment')}}">List Payment</a></li>
-                            <li><a href="{{URL::to('/create-payment')}}">Payment</a></li>
+                            <li><a href="{{route('admin.payment.index')}}">List Payment</a></li>
+                            <li><a href="{{route('admin.payment.create')}}">Payment</a></li>
 
                         </ul>
                     </li>

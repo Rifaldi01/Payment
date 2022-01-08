@@ -5,7 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class eventController extends Controller
+class PaymentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class eventController extends Controller
      */
     public function index()
     {
-        return view('admin.event.index');
+        return view('admin.payment.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class eventController extends Controller
      */
     public function create()
     {
-        return view('admin.event.create');
+        return view('admin.payment.create');
     }
 
     /**
@@ -35,7 +35,7 @@ class eventController extends Controller
      */
     public function store(Request $request)
     {
-        return view('admin.event.detail');
+        //
     }
 
     /**
@@ -46,7 +46,7 @@ class eventController extends Controller
      */
     public function show($id)
     {
-
+        //
     }
 
     /**

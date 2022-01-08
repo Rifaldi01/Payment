@@ -10,14 +10,13 @@
                     <table class="display" id="basic-1">
                         <thead>
                         <tr>
-                            <th>Image</th>
-                            <th>Name Event</th>
+                            <th>No</th>
+                            <th>Event Name</th>
                             <th>Company</th>
                             <th>Star Date</th>
                             <th>End Date</th>
-                            <th>Budgate</th>
                             <th>Max Post</th>
-                            <th>Description</th>
+                            <th>Social Media</th>
                             <th>Hastag</th>
                             <th>Action</th>
                         </tr>
@@ -32,35 +31,9 @@
                             <td>$106,450</td>
                             <td>$106,450</td>
                             <td>$106,450</td>
-                            <td>$106,450</td>
                             <td>
-                                <div>
-                                    <a href="{{URL::to('/create-event')}}" class="btn btn-primary" style="height: 35px; width: 100px;">Edit</a>
-                                </div>
-
-                               <div>
-                                   <a href="{{URL::to('/detail')}}" class="btn btn-warning" style="height: 35px; width: 100px;">Detail</a>
-                               </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Caesar Vance</td>
-                            <td>Pre-Sales Support</td>
-                            <td>New York</td>
-                            <td>21</td>
-                            <td>2011/12/12</td>
-                            <td>$106,450</td>
-                            <td>$106,450</td>
-                            <td>$106,450</td>
-                            <td>$106,450</td>
-                            <td>
-                                <div>
-                                    <a href="" class="btn btn-primary" style="height: 35px; width: 100px;">Edit</a>
-                                </div>
-
-                                <div>
-                                    <a href="" class="btn btn-warning" style="height: 35px; width: 100px;">Detail</a>
-                                </div>
+                                <a href="{{route('admin.event.show', 1)}}" class="btn btn-warning">Detail</a>
+                                <a href="{{route('admin.event.edit', 1)}}" class="btn btn-primary">Edit</a>
                             </td>
                         </tr>
 

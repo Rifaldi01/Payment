@@ -4,7 +4,9 @@
         <div class="card-header pb-0">
             <h5>Create Event</h5></div>
         <div class="card-body">
-            <form class="" action="" method="">
+            <form class="" action="" method="post">
+                @csrf
+
                 <div class="mb-3">
                     <label class="form-label" for=""><i class="text-danger">*</i>Name Event</label>
                     <input type="text" class="form-control" id="validationFormCheck1" placeholder="Name Event" required="">
