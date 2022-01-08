@@ -24,7 +24,7 @@ class dashboardController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
