@@ -35,11 +35,11 @@
                             <td>$106,450</td>
                             <td>
                                 <div>
-                                    <a href="" class="btn btn-primary" style="height: 35px; width: 100px;">Edit</a>
+                                    <a href="{{URL::to('/create-event')}}" class="btn btn-primary" style="height: 35px; width: 100px;">Edit</a>
                                 </div>
 
                                <div>
-                                   <a href="" class="btn btn-warning" style="height: 35px; width: 100px;">Detail</a>
+                                   <a href="{{URL::to('/detail')}}" class="btn btn-warning" style="height: 35px; width: 100px;">Detail</a>
                                </div>
                             </td>
                         </tr>

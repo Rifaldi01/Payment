@@ -10,14 +10,14 @@
                     <input type="text" class="form-control" id="validationFormCheck1" placeholder="Name Event" required="">
                     <div class="invalid-feedback">Example invalid feedback text</div>
                 </div>
+                <div class="mb-2">
+                    <label class="col-form-label"><i class="text-danger">*</i>Company</label>
+                    <select class="js-example-basic-single col-sm-12">
+                        <optgroup label="Company">
+                            <option value="AL">PT. Alibaba Cilukba</option>
+                            <option value="WY">PT. Alibubu</option>
+                        </optgroup>
 
-                <label for="select" class="form-label "><i class="text-danger">*</i>From Company</label>
-                <div class="mb-3">
-                    <select class="form-select" required="" aria-label="select example">
-                        <option value="">Select Company...</option>
-                        <option value="1">PT. MAKMUR </option>
-                        <option value="2">PT. PERKASA </option>
-                        <option value="3">PT. SEJAHTERA INDONESIA</option>
                     </select>
                 </div>
 
@@ -65,10 +65,10 @@
 @endsection
 
 @push('head')
+    <link rel="stylesheet" type="text/css" href="{{URL::to('assets/css/select2.css')}}">
 @endpush
 
 @push('js')
-    <script src="{{URL::to('assets/js/datepicker/date-time-picker/moment.min.js')}}"></script>
-    <script src="{{URL::to('assets/js/datepicker/date-time-picker/tempusdominus-bootstrap-4.min.js')}}"></script>
-    <script src="{{URL::to('assets/js/datepicker/date-time-picker/datetimepicker.custom.js')}}"></script>
+    <script src="{{URL::to('assets/js/select2/select2.full.min.js')}}"></script>
+    <script src="{{URL::to('assets/js/select2/select2-custom.js')}}"></script>
 @endpush
