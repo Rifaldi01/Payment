@@ -24,6 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/', [dashboardController::class, 'index'])->name('dasboard');
 Route::get('/event', [eventController::class, 'index'])->name('event');
+Route::get('/detail', [eventController::class, 'store'])->name('detail');
 Route::get('/create-event', [eventController::class, 'create'])->name('event');
 Route::get('/payment', [paymentController::class, 'index'])->name('payment');
 Route::get('/create-payment', [paymentController::class, 'create'])->name('event');

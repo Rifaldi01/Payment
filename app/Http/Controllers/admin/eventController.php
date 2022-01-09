@@ -35,7 +35,7 @@ class eventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return view('admin.event.detail');
     }
 
     /**
@@ -46,7 +46,7 @@ class eventController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
