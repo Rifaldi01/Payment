@@ -57,7 +57,7 @@
                     <div class="col-lg-6">
                         <div class="">
                             <label class="form-label mb-2 mt-2"><i class="text-danger">*</i>Social Media</label>
-                            {!! Form::select('social_media_id', $social_media, isset($event) ? $event->social_media : null, ['class' => 'form-control js-example-basic-single col-sm-12', 'placeholder' => '--Select Social Media--']) !!}
+                            {!! Form::select('social_media_id', $social_media, isset($event) ? $event->social_media_id : null, ['class' => 'form-control js-example-basic-single col-sm-12', 'placeholder' => '--Select Social Media--']) !!}
                         </div>
                     </div>
                 </div>
