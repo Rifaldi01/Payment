@@ -16,8 +16,8 @@ class CreateEventsTable extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('company_name');
-            $table->string('social_media');
+            $table->string('client_id');
+            $table->string('social_media_id');
             $table->dateTime('started_date');
             $table->dateTime('ended_date');
             $table->bigInteger('budget');
@@ -25,15 +25,15 @@ class CreateEventsTable extends Migration
             $table->longText('description')->nullable();
             $table->text('hastag');
             $table->text('image')->nullable();
-            $table->integer('office');
+            $table->integer('office')->nullable();
             $table->timestamps();
         });
 
         $event = [
             [
                 'name' => 'Lazada Murah',
-                'company_name' => '1',
-                'social_media' => '1',
+                'client_id' => '1',
+                'social_media_id' => '1',
                 'started_date' => '2022-01-09 00:46:49',
                 'ended_date' => '2022-01-09 01:46:49',
                 'budget' => '100000000',
@@ -47,8 +47,8 @@ class CreateEventsTable extends Migration
             ],
             [
                 'name' => 'Ruang Guru Hebat',
-                'company_name' => '2',
-                'social_media' => '1',
+                'client_id' => '2',
+                'social_media_id' => '1',
                 'started_date' => '2022-02-09 00:46:49',
                 'ended_date' => '2022-02-09 01:46:49',
                 'budget' => '50000000',
@@ -62,8 +62,8 @@ class CreateEventsTable extends Migration
             ],
             [
                 'name' => 'Lazada Juara',
-                'company_name' => '1',
-                'social_media' => '1',
+                'client_id' => '1',
+                'social_media_id' => '1',
                 'started_date' => '2022-01-09 00:46:49',
                 'ended_date' => '2022-01-09 01:46:49',
                 'budget' => '70000000',
