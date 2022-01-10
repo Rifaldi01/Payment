@@ -30,6 +30,7 @@
         @include('layouts.component.footer')
     </div>
 </div>
+@include('sweetalert::alert')
 @include('layouts.component.js')
 <!-- Plugin used-->
 </body>

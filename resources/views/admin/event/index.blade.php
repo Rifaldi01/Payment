@@ -17,7 +17,7 @@
                             <th>End Date</th>
                             <th>Max Post</th>
                             <th>Social Media</th>
-                            <th>Hastag</th>
+                            <th>Hastag</th>php
                             <th>Action</th>
                         </tr>
                         </thead>
