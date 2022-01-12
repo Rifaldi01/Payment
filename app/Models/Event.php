@@ -9,4 +9,12 @@ class Event extends Model
 {
     use HasFactory;
     protected $guarded =  [];
+
+    public function sosmed(){
+        return $this->belongsTo(Social_media::class, 'social_media_id', 'id');
+    }
+
+    public function client(){
+        return $this->belongsTo(Client::class);
+    }
 }

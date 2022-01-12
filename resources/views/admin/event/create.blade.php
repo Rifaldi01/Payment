@@ -65,7 +65,7 @@
 
                 <div>
                     <label class="form-label mt-2"><i class="text-danger">*</i>Description</label>
-                    {!! Form::textarea('description', isset($event) ? $event->description : null, ['class' => 'form-control']) !!}
+                    {!! Form::textarea('description', isset($event) ? $event->description : null, ['class' => 'form-control', 'id' => 'redactor']) !!}
                 </div>
                 <div class="mb-2 mt-2">
                     <label class="form-label  mt-2"><i class="text-danger">*</i>Hastag</label>
@@ -87,6 +87,7 @@
 
 @push('head')
     <link rel="stylesheet" type="text/css" href="{{URL::to('assets/css/select2.css')}}">
+    <link rel="stylesheet" href="{{ URL::to('assets/redactor/redactor.min.css') }}" />
 @endpush
 
 @push('js')
@@ -96,6 +97,19 @@
         $(function () {
             $('#started_date').datepicker();
             $('#ended_date').datetimepicker();
+        });
+    </script>
+
+    <script src="{{ URL::to('assets/redactor/redactor.min.js')}}"></script>
+    <script src="{{ URL::to('assets/redactor/_plugins/alignment/alignment.min.js')}}"></script>
+
+    <script type="text/javascript">
+        $R('#redactor', {
+            minHeight: '300px',
+            toolbarFixedTopOffset: 60,//, komana teu katulis, aya comment jd weuh komaan td siap. teu ngarti js wkwk oke
+            plugins: ['alignment']
+
+
         });
     </script>
 @endpush

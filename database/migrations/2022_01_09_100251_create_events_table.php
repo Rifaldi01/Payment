@@ -18,8 +18,8 @@ class CreateEventsTable extends Migration
             $table->string('name');
             $table->string('client_id');
             $table->string('social_media_id');
-            $table->dateTime('started_date');
-            $table->dateTime('ended_date');
+            $table->date('started_date');
+            $table->date('ended_date');
             $table->bigInteger('budget');
             $table->integer('max_post');
             $table->longText('description')->nullable();

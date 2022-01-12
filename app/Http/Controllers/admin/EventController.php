@@ -18,7 +18,9 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view('admin.event.index');
+        $event = Event::with(['sosmed', 'client'])->get();
+
+        return view('admin.event.index', ['event' => $event]);
     }
 
     /**
@@ -62,7 +64,8 @@ class EventController extends Controller
      */
     public function show($id)
     {
-
+        $event = Event::whereId($id)->first();
+        return view('admin.event.detail', compact('event'));
     }
 
     /**
@@ -91,7 +94,7 @@ class EventController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @    int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -115,4 +118,24 @@ class EventController extends Controller
         Alert::success('data berhasil disimpan');
         return redirect()->route('admin.event.index');
     }
+
+    public function publish($id){
+        return $this->active($id, 1 );
+    }
+
+    public function expired($id){
+        return $this->active($id, 2 );
+    }
+
+
+
+    private function active($id, $status){
+        Event::whereId($id)->update([
+            'status' => $status
+        ]);
+        return back()->withToastSuccess('Berhasil');
+    }
+
+
+
 }

@@ -12,31 +12,47 @@
                         <tr>
                             <th>No</th>
                             <th>Event Name</th>
-                            <th>Company</th>
-                            <th>Star Date</th>
-                            <th>End Date</th>
-                            <th>Max Post</th>
+                            <th>Client</th>
                             <th>Social Media</th>
-                            <th>Hastag</th>php
-                            <th>Action</th>
+                            <th>Hastag</th>
+                            <th>Status</th>
+                            <th width="25%" class="text-center">Action</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>Caesar Vance</td>
-                            <td>Pre-Sales Support</td>
-                            <td>New York</td>
-                            <td>21</td>
-                            <td>2011/12/12</td>
-                            <td>$106,450</td>
-                            <td>$106,450</td>
-                            <td>$106,450</td>
-                            <td>
-                                <a href="{{route('admin.event.show', 1)}}" class="btn btn-warning">Detail</a>
-                                <a href="{{route('admin.event.edit', 1)}}" class="btn btn-primary">Edit</a>
-                            </td>
-                        </tr>
-
+                        @foreach($event as $key => $event)
+                            <tr>
+                                <td class="text-center">{{$key +1}}</td>
+                                <td>{{$event->name }}</td>
+                                <td>{{$event->client->name}}</td>
+                                <td>{{$event->sosmed->name}}</td>
+                                <td>{{$event->hastag}}</td>
+                                <td>
+                                    @if($event->status == 0)
+                                        <span class="badge badge-info">Non Active</span>
+                                    @elseif($event->status == 1)
+                                        <span class="badge badge-success">Active</span>
+                                    @else
+                                        <span class="badge badge-danger">Danger</span>
+                                    @endif
+                                </td>
+                                <td class="text-center">
+                                    @if($event->status == 0)
+                                        <a href="{{route('admin.event.publish', $event->id)}}"
+                                           class="btn btn-primary btn-sm"> Publish</a>
+                                    @elseif($event->status == 1)
+                                        <a href="{{route('admin.event.expired', $event->id)}}"
+                                           class="btn btn-danger btn-sm"> Expired</a>
+                                    @endif
+                                    <a href="{{route('admin.event.show', $event->id)}}" class="btn btn-info btn-sm"><i
+                                            class="fa fa-eye"></i> Detail</a>
+                                    @if($event->status =!2)
+                                        <a href="{{route('admin.event.edit', $event->id)}}"
+                                           class="btn btn-primary btn-sm {{$disable}} "><i class="fa fa-edit"></i> Edit</a>
+                                    @endif
+                                </td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

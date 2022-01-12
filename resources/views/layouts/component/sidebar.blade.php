@@ -18,19 +18,23 @@
 
                     </li>
                     <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i
-                                data-feather="airplay"></i><span>Event</span></a>
+                                data-feather="calendar"></i><span>Event</span></a>
                         <ul class="nav-submenu menu-content">
                             <li><a href="{{route('admin.event.index')}}">List Event</a></li>
                             <li><a href="{{route('admin.event.create')}}">Create Event</a></li>
                         </ul>
                     </li>
                     <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i
-                                data-feather="layout"></i><span>Payment</span></a>
+                                data-feather="credit-card"></i><span>Payment</span></a>
                         <ul class="nav-submenu menu-content">
                             <li><a href="{{route('admin.payment.index')}}">List Payment</a></li>
                             <li><a href="{{route('admin.payment.create')}}">Payment</a></li>
 
                         </ul>
+                    </li>
+                    <li><a class="nav-link" href="{{route('admin.client.index')}}"><i
+                                data-feather="users"></i><span>Client</span></a>
+
                     </li>
 
                 </ul>

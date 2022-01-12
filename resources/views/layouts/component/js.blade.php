@@ -8,8 +8,23 @@
 <script src="{{URL::to('assets/js/config.js')}}"></script>
 <!-- Bootstrap js-->
 
+<script src="{{asset('assets/js/bootstrap/popper.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap/bootstrap.min.js')}}"></script>
+
 <!-- Theme js-->
 <script src="{{URL::to('assets/js/script.js')}}"></script>
-<script src="{{URL::to('assets/js/theme-customizer/customizer.js')}}"></script>
+
 <!-- login js-->
+
+
+<script src="{{URL::to('assets/js/chart/apex-chart/apex-chart.js')}}"></script>
+
+<script src="{{URL::to('assets/js/dashboard/default.js')}}"></script>
+
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 @stack('js')
